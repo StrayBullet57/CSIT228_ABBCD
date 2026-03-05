@@ -1,5 +1,6 @@
 # EDEN'S FALL: Infernum
-![Sylvie](Assets/sylvie.png)
+<img src="Assets/sylvie.png" width="300">
+  
 Todo:
 1. Organize this crap.
 2. Move Characters to a Character folder.
