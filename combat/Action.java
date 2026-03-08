@@ -1,3 +1,7 @@
+package combat;
+
+import characters.Character;
+
 public interface Action {
     public void attack(Character enemy, Character player);
     public void defend(Character player);

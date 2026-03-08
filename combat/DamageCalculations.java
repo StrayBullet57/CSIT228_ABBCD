@@ -1,3 +1,5 @@
+package combat;
+
 public interface DamageCalculations{
      default int calculateHeal(){
                return 0;
