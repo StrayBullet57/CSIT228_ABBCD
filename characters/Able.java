@@ -1,5 +1,7 @@
-class Able extends Character{
-    Able(){
+package characters;
+
+public class Able extends Character{
+    public Able(){
         super(50,5,2,1,"Able", "Flower Petals", "Healing Light", "Wind Shield");//HP,MP,ATK,DEF,Name
     }
     // added skill strings- ray🥺🙏

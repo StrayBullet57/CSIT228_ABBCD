@@ -1,4 +1,9 @@
-class Character implements Dialogues, Action, DamageCalculations{
+package characters;
+import combat.Action;
+import combat.DamageCalculations;
+import combat.Dialogues;
+
+public class Character implements Dialogues, Action, DamageCalculations{
     private int hp;
     private int mp;
     private final int atk;

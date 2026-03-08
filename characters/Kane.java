@@ -1,5 +1,7 @@
-class Kane extends Character{
-    Kane(){
+package characters;
+
+public class Kane extends Character{
+    public Kane(){
         super(50,5,2,1,"Kane", "Flame Strike", "Shadow Step", "Wind Slash");//HP,MP,ATK,DEF,Name
     }
     // added skill strings- ray🥺🙏
