@@ -1,6 +1,6 @@
 class Kane extends Character{
     Kane(){
-        super(10,5,2,1,"Kane");//HP,MP,ATK,DEF,Name
+        super(50,5,2,1,"Kane", "Flame Strike", "Shadow Step", "Wind Slash");//HP,MP,ATK,DEF,Name
     }
     @Override
     public void whenPicked(){
@@ -15,5 +15,21 @@ class Kane extends Character{
     @Override
     public void whenVictory(){
         System.out.println(getName()+": Hmm, Easy!");
+    }
+
+    //SKILLS
+    @Override
+    public void skillOne(Character enemy, Character player) {
+        System.out.println(player.getName()+"has used Flame Strike");
+    }
+
+    @Override
+    public void skillTwo(Character enemy, Character player) {
+        System.out.println(player.getName()+"has used Shadow Step");
+    }
+    
+    @Override
+    public void skillThree(Character enemy, Character player) {
+        System.out.println(player.getName()+"has used Wind Slash");
     }
 }

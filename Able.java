@@ -1,6 +1,6 @@
-class Able extends Character implements Dialogues{
+class Able extends Character{
     Able(){
-        super(10,5,2,1,"Able");//HP,MP,ATK,DEF,Name
+        super(50,5,2,1,"Able", "Flower Petals", "Healing Light", "Wind Shield");//HP,MP,ATK,DEF,Name
     }
     @Override
     public void whenPicked(){
@@ -15,5 +15,20 @@ class Able extends Character implements Dialogues{
     @Override
     public void whenVictory(){
         System.out.println(getName()+": Rock and roll!");
+    }
+
+     @Override
+    public void skillOne(Character enemy, Character player) {
+        System.out.println(player.getName()+" used Flower Petals");
+    }
+
+    @Override
+    public void skillTwo(Character enemy, Character player) {
+        System.out.println(player.getName()+" used Healing Light");
+    }
+    
+    @Override
+    public void skillThree(Character enemy, Character player) {
+        System.out.println(player.getName()+" used Wind Shield");
     }
 }

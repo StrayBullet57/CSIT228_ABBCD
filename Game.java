@@ -47,17 +47,20 @@ class Game{
         }
 
         while(player1.getHP() > 0 && player2.getHP() > 0){// Battle Loop🥺🙏
-            System.out.println("Player 1 HP: " + player1.getHP());
-            System.out.println("Player 2 HP: " + player2.getHP());
+            System.out.println("Player 1("+player1.getName()+") HP: " + player1.getHP());
+            System.out.println("Player 2("+player2.getName()+") HP: " + player2.getHP());
 
             if(turn == 1){
                 System.out.println("Player 1's Turn.");
-                System.out.println("[1] Basic Attack, [2] Defend, [3] Skill 1, [4] Skill 2, [5] Skill 3");
+                System.out.println("[1] Basic Attack\n[2] Defend\n[3] "+player1.getSkillOneName()+"\n[4] "+player1.getSkillTwoName()+"\n[5] "+player1.getSkillThreeName()+"\n");
                 action = scan.nextInt();
                 
                 switch(action){// Ilisdi Ika himo sa damage calculation class. 🥺🙏
                     case 1 -> player1.attack(player2, player1);
                     case 2 -> player1.defend(player1);
+                    case 3 ->player1.skillOne(player2, player1);
+                    case 4 ->player1.skillTwo(player2, player1);
+                    case 5 ->player1.skillThree(player2, player1);
                     // ATTENTION!!! Kung kinsay mocode sa damage calculation, Himoa para naay damage reduction ika attack ni player2/1🥺🙏
                     default -> { System.out.println("Invalid input, Defending.");   player1.defend(player1); }
                 }
@@ -66,12 +69,15 @@ class Game{
 
             else if(turn == 2){
                 System.out.println("Player 2's Turn.");
-                System.out.println("[1] Basic Attack, [2] Defend, [3] Skill 1, [4] Skill 2, [5] Skill 3");
+                System.out.println("[1] Basic Attack\n[2] Defend\n[3] "+player2.getSkillOneName()+"\n[4] "+player2.getSkillTwoName()+"\n[5] "+player2.getSkillThreeName()+"\n");
                 action = scan.nextInt();
                 
                 switch(action){// Ilisdi Ika himo sa damage calculation class. 🥺🙏
                     case 1 -> player2.attack(player1, player2);
                     case 2 -> player2.defend(player2);
+                    case 3 -> player2.skillOne(player1, player2);
+                    case 4 -> player2.skillTwo(player1, player2);
+                    case 5 -> player2.skillThree(player1, player2);
                     // ATTENTION!!! Kung kinsay mocode sa damage calculation, Himoa para naay damage reduction ika attack ni player2/1🥺🙏
                     default -> { System.out.println("Invalid input, Defending.");   player2.defend(player2); }
                 }
