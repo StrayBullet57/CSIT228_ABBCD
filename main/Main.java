@@ -1,3 +1,6 @@
+package main;
+
+import game.Game;
 import java.util.Scanner;
 
 public class Main{// GAME TITLE suggestion: EDEN'S FALL: Infernum🥺🙏 || List suggestion ||
@@ -14,6 +17,7 @@ public class Main{// GAME TITLE suggestion: EDEN'S FALL: Infernum🥺🙏 || Lis
         } else{// Insert else if for PVE mode if added.🥺🙏
             System.out.println("Invalid input.");
         }
+        scan.close();
     }
 }
 // Members:
