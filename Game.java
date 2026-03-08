@@ -21,16 +21,28 @@ class Game{
         System.out.print("Player 1: ");// Player 1 Character Selection🥺🙏
         p1 = scan.nextInt();
         switch(p1){
-            case 1 -> player1 = new Kane();
-            case 2 -> player1 = new Able();
+            case 1 -> {
+                player1 = new Kane();
+                player1.whenPicked();
+            }
+            case 2 -> {
+                player1 = new Able();
+                player1.whenPicked();
+            }
             default -> { System.out.println("Invalid input, defaulting to Kane.");   player1 = new Kane(); }
         }
 
         System.out.print("Player 2: ");// Player 2 Character Selection🥺🙏
         p2 = scan.nextInt();
         switch(p2){
-            case 1 -> player2 = new Kane();
-            case 2 -> player2 = new Able();
+            case 1 -> {
+                player2 = new Kane();
+                player2.whenPicked();
+            }
+            case 2 -> {
+                player2 = new Able();
+                player2.whenPicked();
+            }
             default -> { System.out.println("Invalid input, defaulting to Kane.");   player2 = new Kane(); }
         }
 

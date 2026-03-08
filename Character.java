@@ -1,4 +1,4 @@
-class Character{
+class Character implements Dialogues{
     private int hp;
     private int mp;
     private final int atk;
@@ -26,5 +26,18 @@ class Character{
     }
     public void defend(Character player){
         System.out.println(player.getName() + " defends for the next attack.\n");// Does nothing for now🥺🙏
+    }
+
+    @Override
+    public void whenDefeated() {
+        System.out.println("test");
+    }
+    @Override
+    public void whenPicked() {
+        System.out.println("test");
+    }
+    @Override
+    public void whenVictory() {
+        System.out.println("test");
     }
 }
