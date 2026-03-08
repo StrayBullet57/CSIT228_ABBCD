@@ -53,6 +53,7 @@ class Game{
             if(turn == 1){
                 System.out.println("Player 1's Turn.");
                 System.out.println("[1] Basic Attack\n[2] Defend\n[3] "+player1.getSkillOneName()+"\n[4] "+player1.getSkillTwoName()+"\n[5] "+player1.getSkillThreeName()+"\n");
+                //changed skill display- ray🥺🙏
                 action = scan.nextInt();
                 
                 switch(action){// Ilisdi Ika himo sa damage calculation class. 🥺🙏
@@ -61,6 +62,7 @@ class Game{
                     case 3 ->player1.skillOne(player2, player1);
                     case 4 ->player1.skillTwo(player2, player1);
                     case 5 ->player1.skillThree(player2, player1);
+                    //changed display (added more cases and display skill names when used)- ray🥺🙏
                     // ATTENTION!!! Kung kinsay mocode sa damage calculation, Himoa para naay damage reduction ika attack ni player2/1🥺🙏
                     default -> { System.out.println("Invalid input, Defending.");   player1.defend(player1); }
                 }
@@ -70,6 +72,7 @@ class Game{
             else if(turn == 2){
                 System.out.println("Player 2's Turn.");
                 System.out.println("[1] Basic Attack\n[2] Defend\n[3] "+player2.getSkillOneName()+"\n[4] "+player2.getSkillTwoName()+"\n[5] "+player2.getSkillThreeName()+"\n");
+                //changed skill display- ray🥺🙏
                 action = scan.nextInt();
                 
                 switch(action){// Ilisdi Ika himo sa damage calculation class. 🥺🙏
@@ -78,6 +81,7 @@ class Game{
                     case 3 -> player2.skillOne(player1, player2);
                     case 4 -> player2.skillTwo(player1, player2);
                     case 5 -> player2.skillThree(player1, player2);
+                    //changed display (added more cases and display skill names when used)- ray🥺🙏
                     // ATTENTION!!! Kung kinsay mocode sa damage calculation, Himoa para naay damage reduction ika attack ni player2/1🥺🙏
                     default -> { System.out.println("Invalid input, Defending.");   player2.defend(player2); }
                 }

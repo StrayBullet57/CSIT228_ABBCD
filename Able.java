@@ -2,6 +2,7 @@ class Able extends Character{
     Able(){
         super(50,5,2,1,"Able", "Flower Petals", "Healing Light", "Wind Shield");//HP,MP,ATK,DEF,Name
     }
+    // added skill strings- ray🥺🙏
     @Override
     public void whenPicked(){
         System.out.println(getName()+": Let's goo!");

@@ -2,6 +2,7 @@ class Kane extends Character{
     Kane(){
         super(50,5,2,1,"Kane", "Flame Strike", "Shadow Step", "Wind Slash");//HP,MP,ATK,DEF,Name
     }
+    // added skill strings- ray🥺🙏
     @Override
     public void whenPicked(){
         System.out.println(getName()+": I'm ready to fight!");
