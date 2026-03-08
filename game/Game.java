@@ -1,5 +1,11 @@
+package game;
+
 import java.util.Scanner;
-class Game{
+import characters.Character;
+import characters.Able;
+import characters.Kane;
+
+public class Game{
     public void start(){//Main Game Loop happens here.🥺🙏
         Scanner scan = new Scanner(System.in);
         
@@ -92,6 +98,7 @@ class Game{
         //Gameover End = new Gameover(); Himoi ninyo og Game Over class, Mo show kinsa nkadaug or if Tie ba.🥺🙏
         //End.start();
 
+        scan.close();
     }
 }
 
