@@ -21,7 +21,7 @@ class Able extends Character{
      @Override
     public void skillOne(Character enemy, Character player) {
         System.out.println(player.getName()+" used Flower Petals");
-        enemy.setHP(enemy.getHP()-(player.calculateDamage()*2)-enemy.getDEF()); // multiplier placeholders - ray
+        enemy.setHP(enemy.getHP()-(player.calculateDamage()*2)-enemy.getDEF()); // multiplier placeholders - ray🤓👆
     }
 
     @Override

@@ -2,12 +2,12 @@ class Character implements Dialogues, Action, DamageCalculations{
     private int hp;
     private int mp;
     private final int atk;
-    private int def; // removed string kay naay skills mo increase def - ray
+    private int def; // removed string kay naay skills mo increase def - ray 🤓👆
     private final String name;
     private final String skillOneName;
     private final String skillTwoName;
     private final String skillThreeName;
-    // added skill strings- ray🥺🙏
+    // added skill strings- ray🤓👆
     Character(int hp, int mp, int atk, int def, String name, String skillOneName, String skillTwoName, String skillThreeName){
         this.hp = hp;
         this.mp = mp;

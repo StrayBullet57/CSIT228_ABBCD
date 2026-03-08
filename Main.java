@@ -19,7 +19,7 @@ public class Main{// GAME TITLE suggestion: EDEN'S FALL: Infernum🥺🙏 || Lis
 // Members:
 // Butngi ninyog emoji ang mga codes, etc. + mga parts na gichange ninyo :D 🥺🙏
 // StrayBullet57 = 🥺🙏
-// Dogface0518 = 🥺👉👈 AHAHAHAHAHAHAHAHA || LEAD GUI DEVELOPER ||
-//
+// Dogface0518 = 🥺👉👈 
+// Heartie123 = 🤓👆 
 //
 //
