@@ -22,15 +22,20 @@ class Kane extends Character{
     @Override
     public void skillOne(Character enemy, Character player) {
         System.out.println(player.getName()+"has used Flame Strike");
+        enemy.setHP(enemy.getHP()-(player.calculateDamage()*2)-enemy.getDEF()); // multiplier placeholders - ray
     }
 
     @Override
     public void skillTwo(Character enemy, Character player) {
         System.out.println(player.getName()+"has used Shadow Step");
+        enemy.setHP(enemy.getHP()-(player.calculateDamage()*3)-enemy.getDEF()); // multiplier placeholders - ray
     }
     
     @Override
     public void skillThree(Character enemy, Character player) {
         System.out.println(player.getName()+"has used Wind Slash");
+        enemy.setHP(enemy.getHP()-(player.calculateDamage()*4)-enemy.getDEF()); // multiplier placeholders - ray
     }
+
+    
 }

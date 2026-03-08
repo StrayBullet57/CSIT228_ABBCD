@@ -1,13 +1,13 @@
-class Character implements Dialogues, Action{
+class Character implements Dialogues, Action, DamageCalculations{
     private int hp;
     private int mp;
     private final int atk;
-    private final int def;
+    private int def; // removed string kay naay skills mo increase def - ray
     private final String name;
     private final String skillOneName;
     private final String skillTwoName;
     private final String skillThreeName;
-
+    // added skill strings- ray🥺🙏
     Character(int hp, int mp, int atk, int def, String name, String skillOneName, String skillTwoName, String skillThreeName){
         this.hp = hp;
         this.mp = mp;
@@ -20,6 +20,7 @@ class Character implements Dialogues, Action{
     }
     public void setHP(int hp){ this.hp = hp; }
     public void setMP(int mp){ this.mp = mp; }
+    public void setDEF(int def){this.def = def;}
     public int getHP(){ return hp; }
     public int getMP(){ return mp; }
     public int getATK(){ return atk; }// Base attack, Anhi ebase ang basic damage; Pag-add lang mog numbers para sa dmg calculation. 🥺🙏
@@ -69,4 +70,15 @@ class Character implements Dialogues, Action{
     public void whenVictory() {
         System.out.println("test");
     }
+
+
+    public int calculateHeal(){
+               return atk*2;
+     }
+    public int calculateDefense(){
+               return def;
+     }
+    public int calculateDamage(){
+               return atk;
+     }
 }
