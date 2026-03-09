@@ -5,14 +5,14 @@ import combat.Dialogues;
 
 public class Character implements Dialogues, Action, DamageCalculations{
     private int hp;
-    private int mp;
+    private int mp;// Not used || Use this for skills. 🥺🙏
     private final int atk;
-    private int def; // removed string kay naay skills mo increase def - ray 🤓👆
+    private int def; // Not used? || Make this thing work. 🥺🙏
     private final String name;
     private final String skillOneName;
     private final String skillTwoName;
     private final String skillThreeName;
-    // added skill strings- ray🤓👆
+
     Character(int hp, int mp, int atk, int def, String name, String skillOneName, String skillTwoName, String skillThreeName){
         this.hp = hp;
         this.mp = mp;
@@ -28,8 +28,8 @@ public class Character implements Dialogues, Action, DamageCalculations{
     public void setDEF(int def){this.def = def;}
     public int getHP(){ return hp; }
     public int getMP(){ return mp; }
-    public int getATK(){ return atk; }// Base attack, Anhi ebase ang basic damage; Pag-add lang mog numbers para sa dmg calculation. 🥺🙏
-    public int getDEF(){ return def; }// Base defense, E-apil nis damage calculation pls, para naa siyay gamit. 🥺🙏
+    public int getATK(){ return atk; }
+    public int getDEF(){ return def; }
     public String getName(){ return name; }
     public String getSkillOneName(){return skillOneName;}
     public String getSkillTwoName(){return skillTwoName;}
