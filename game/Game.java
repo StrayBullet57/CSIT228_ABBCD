@@ -11,20 +11,10 @@ public class Game{
         
         //Intro intro = new Intro();  Himoi ninyog introduction section.🥺🙏
         //Intro.start();
-        Intro intro = new Intro();
+        Intro intro = new Intro(); //added by Boltron = 🥺👉👈 
         intro.start();
 
-        class Intro{
-            public void start(){
-                System.out.println("====================================");
-                System.out.println("        WELCOME TO THE GAME         ");
-                System.out.println("====================================");
-                System.out.println("Two players will choose characters.");
-                System.out.println("Fight until one player's HP becomes 0");
-                System.out.println("Good Luck!");
-                System.out.println("===================================\n");
-            }
-        }
+        
         int p1, p2;
         int turn = 1, action;
         Character player1;
@@ -110,28 +100,54 @@ public class Game{
 
         //Gameover End = new Gameover(); Himoi ninyo og Game Over class, Mo show kinsa nkadaug or if Tie ba.🥺🙏
         //End.start();
-        Gamover end = new Gameover(); //added by 
+        Gameover end = new Gameover(); //added by Boltron = 🥺👉👈 
         end.start(player1, player2);
 
-    class Gameover {
+        
+        scan.close();
+    }
+}
+class Intro {
 
-        public void start(characters.Character p1, characters.Character p2) {
+    public void start() {
 
-            System.out.println("\n========== GAME OVER ==========");
+        System.out.println("====================================");
+        System.out.println("      ⚔ EDEN'S FALL: INFERNUM ⚔");
+        System.out.println("====================================");
+        System.out.println("Two Warriors enter the arena...");
+        System.out.println("Only One will emerge victorious.");
+        System.out.println();
+        System.out.println("Choose your fighter and prepare");
+        System.out.println("for an epic battle!");
+        System.out.println("====================================");
 
-            if (p1.getHP() <= 0 && p2.getHP() <= 0) {
-            System.out.println("It's a TIE!");
-            } else if (p1.getHP() <= 0) {
-            System.out.println("Player 2 (" + p2.getName() + ") WINS!");
-            } else if (p2.getHP() <= 0) {
-            System.out.println("Player 1 (" + p1.getName() + ") WINS!");
-            }
-            System.out.println("===============================");
+        try {
+            System.in.read();
+        } catch (Exception e) {}
+
+        System.out.println();
+    }
+}
+class Gameover {
+
+    public void start(Character p1, Character p2) {
+
+        System.out.println("\n====================================");
+        System.out.println("             GAME OVER");
+        System.out.println("====================================");
+
+        if (p1.getHP() <= 0 && p2.getHP() <= 0) {
+            System.out.println("The battle ended in a TIE!");
+        }
+        else if (p1.getHP() <= 0) {
+            System.out.println("🏆 Player 2 (" + p2.getName() + ") is the WINNER!");
+        }
+        else if (p2.getHP() <= 0) {
+            System.out.println("🏆 Player 1 (" + p1.getName() + ") is the WINNER!");
         }
 
-    }
-
-        scan.close();
+        System.out.println("====================================");
+        System.out.println("Thanks for playing!");
     }
 }
 
