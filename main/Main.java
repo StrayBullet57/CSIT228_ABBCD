@@ -1,13 +1,12 @@
 package main;
 
-import java.util.Scanner;
-
 import environments.Arena;
 import environments.CyberCityStage;
 import environments.VolcanoStage;
 import game.Game;
+import java.util.Scanner;
 
-public class Main{// GAME TITLE suggestion: EDEN'S FALL: Infernum🥺🙏 || List suggestion ||
+public class Main{
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
@@ -26,7 +25,7 @@ public class Main{// GAME TITLE suggestion: EDEN'S FALL: Infernum🥺🙏 || Lis
 
         arena.setChosenArena(chocie1);
 
-        switch (arena.getChosenArena()) { //conditon for picking arena/world🤔🧐
+        switch (arena.getChosenArena()) { // Conditon for picking arena/world🤔🧐
 
             case 1:
                 System.out.println("You have chosen the Volcano Stage!\n");
@@ -44,14 +43,14 @@ public class Main{// GAME TITLE suggestion: EDEN'S FALL: Infernum🥺🙏 || Lis
                 break;
         }
 
-        System.out.print("Enter 1 for PVP: ");// 1 for PVP, 2 for PVE. ! Ambot lng kung mogana inani na style, para ra ni para makacontribute tanan og 3 ka class. Line 13🥺🙏
+        System.out.print("Enter 1 for PVP: ");// 1 for PVP, 2 for PVE. ! para makacontribute tanan og 3 ka class.🥺🙏
         int choice = scan.nextInt();
 
         if(choice == 1){
 
             Game game = new Game();
             game.start();
-        } else{// Insert else if for PVE mode if added.🥺🙏
+        } else{// Insert here for PVE or other.🥺🙏
             System.out.println("Invalid input.");
         }
         scan.close();
