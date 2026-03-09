@@ -11,7 +11,7 @@ public class Game{
         
         //Intro intro = new Intro();  Himoi ninyog introduction section.🥺🙏
         //Intro.start();
-        Intro intro = new Intro(); //added by Boltron = 🥺👉👈 
+        Intro intro = new Intro(); //added by Bolts = 🥺👉👈 
         intro.start();
 
         
@@ -109,7 +109,7 @@ public class Game{
 
         //Gameover End = new Gameover(); Himoi ninyo og Game Over class, Mo show kinsa nkadaug or if Tie ba.🥺🙏
         //End.start();
-        Gameover end = new Gameover(); //added by Boltron = 🥺👉👈 
+        Gameover end = new Gameover(); //added by Bolts = 🥺👉👈 
         end.start(player1, player2);
 
         
