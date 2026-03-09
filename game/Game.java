@@ -23,7 +23,7 @@ public class Game{
         System.out.println("Choose your character.");//Character Creation🥺🙏
         System.out.println("1. Kane");
         System.out.println("2. Able");
-        System.out.println("3. ???");
+        System.out.println("3. Luna");
         System.out.println("4. ???");
         System.out.println("5. ???");// Dunno, add lang unsa inyo ganahan, pede rasad malapas og 5 character.🥺🙏 Erase after change.
 
@@ -36,6 +36,10 @@ public class Game{
             }
             case 2 -> {
                 player1 = new Able();
+                player1.whenPicked();
+            }
+            case 3 -> {
+                player1 = new Luna();
                 player1.whenPicked();
             }
             default -> { System.out.println("Invalid input, defaulting to Kane.");   player1 = new Kane(); }
@@ -52,8 +56,13 @@ public class Game{
                 player2 = new Able();
                 player2.whenPicked();
             }
+            case 3 -> {
+                player2 = new Luna();
+                player2.whenPicked();
+            }
             default -> { System.out.println("Invalid input, defaulting to Able.");   player2 = new Able(); }
         }
+
 
         while(player1.getHP() > 0 && player2.getHP() > 0){// Battle Loop🥺🙏
             System.out.println("Player 1("+player1.getName()+") HP: " + player1.getHP());
