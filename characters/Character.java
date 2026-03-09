@@ -7,7 +7,7 @@ public class Character implements Dialogues, Action, DamageCalculations{
     private int hp;
     private int mp;// Not used || Use this for skills. 🥺🙏
     private final int atk;
-    private int def; // Not used? || Make this thing work. 🥺🙏
+    private int def; // Used || Partially, defend skill needs to add more defense stat 🥺🙏
     private final String name;
     private final String skillOneName;
     private final String skillTwoName;
