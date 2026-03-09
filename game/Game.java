@@ -1,17 +1,15 @@
 package game;
 
-import java.util.Scanner;
-import characters.Character;
 import characters.Able;
+import characters.Character;
 import characters.Kane;
 import characters.Luna;
+import java.util.Scanner;
 
 public class Game{
-    public void start(){//Main Game Loop happens here.🥺🙏
+    public void start(){
         Scanner scan = new Scanner(System.in);
         
-        //Intro intro = new Intro();  Himoi ninyog introduction section.🥺🙏
-        //Intro.start();
         Intro intro = new Intro(); //added by Bolts = 🥺👉👈 
         intro.start();
 
@@ -26,7 +24,6 @@ public class Game{
         System.out.println("2. Able");
         System.out.println("3. Luna");
         System.out.println("4. ???");
-        System.out.println("5. ???");// Dunno, add lang unsa inyo ganahan, pede rasad malapas og 5 character.🥺🙏 Erase after change.
 
         System.out.print("Player 1: ");// Player 1 Character Selection🥺🙏
         p1 = scan.nextInt();
@@ -72,18 +69,15 @@ public class Game{
             if(turn == 1){
                 System.out.println("Player 1's Turn.");
                 System.out.println("[1] Basic Attack\n[2] Defend\n[3] "+player1.getSkillOneName()+"\n[4] "+player1.getSkillTwoName()+"\n[5] "+player1.getSkillThreeName()+"\n");
-                //changed skill display🥺🙏, Changed 🤓👆
                 action = scan.nextInt();
                 
-                switch(action){// Ilisdi Ika himo sa damage calculation class. 🥺🙏, Added 3 Skills 🤓👆
+                switch(action){
                     case 1 -> player1.attack(player2, player1);
-                    case 2 -> player1.defend(player1);
+                    case 2 -> player1.defend(player1);// Does not work!🥺🙏
                     case 3 ->player1.skillOne(player2, player1);
                     case 4 ->player1.skillTwo(player2, player1);
                     case 5 ->player1.skillThree(player2, player1);
-                    //changed display (added more cases and display skill names when used)- ray🤓👆
-                    // ATTENTION!!! Kung kinsay mocode sa damage calculation, Himoa para naay damage reduction ika attack ni player2/1🥺🙏
-                    default -> { System.out.println("Invalid input, Defending.");   player1.defend(player1); }
+                    default -> { System.out.println("Invalid input, Defending.");   player1.defend(player1); }// Defend does not work!🥺🙏
                 }
                 turn = 2;
             }
@@ -91,29 +85,23 @@ public class Game{
             else if(turn == 2){
                 System.out.println("Player 2's Turn.");
                 System.out.println("[1] Basic Attack\n[2] Defend\n[3] "+player2.getSkillOneName()+"\n[4] "+player2.getSkillTwoName()+"\n[5] "+player2.getSkillThreeName()+"\n");
-                //changed skill display- ray🥺🙏
                 action = scan.nextInt();
                 
-                switch(action){// Ilisdi Ika himo sa damage calculation class. 🥺🙏
+                switch(action){
                     case 1 -> player2.attack(player1, player2);
-                    case 2 -> player2.defend(player2);
+                    case 2 -> player2.defend(player2);// Does not work!🥺🙏
                     case 3 -> player2.skillOne(player1, player2);
                     case 4 -> player2.skillTwo(player1, player2);
                     case 5 -> player2.skillThree(player1, player2);
-                    //changed display (added more cases and display skill names when used)- ray🤓👆
-                    // ATTENTION!!! Kung kinsay mocode sa damage calculation, Himoa para naay damage reduction ika attack ni player2/1🥺🙏
-                    default -> { System.out.println("Invalid input, Defending.");   player2.defend(player2); }
+                    default -> { System.out.println("Invalid input, Defending.");   player2.defend(player2); }// Defend does not work!🥺🙏
                 }
                 turn = 1;
             }
         }
 
-        //Gameover End = new Gameover(); Himoi ninyo og Game Over class, Mo show kinsa nkadaug or if Tie ba.🥺🙏
-        //End.start();
         Gameover end = new Gameover(); //added by Bolts = 🥺👉👈 
         end.start(player1, player2);
 
-        
         scan.close();
     }
 }
@@ -160,4 +148,3 @@ class Gameover {
         System.out.println("Thanks for playing!");
     }
 }
-
