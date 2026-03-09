@@ -1,7 +1,7 @@
 package characters;
 
 public class Luna extends Character {
-    public Luna(){
+    public Luna(){ // added by Bolts = 🥺👉👈
         super(60, 8, 3, 1, "Luna", "Moon Slash", "Lunar Shield", "Eclipse Strike"); // HP,MP,ATK,DEF,Name
     }
 
