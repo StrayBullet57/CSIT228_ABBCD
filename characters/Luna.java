@@ -1,44 +1,40 @@
-class Luna extends Character {
-    public Luna() {
-        super();
+package characters;
+
+public class Luna extends Character {
+    public Luna(){
+        super(60, 8, 3, 1, "Luna", "Moon Slash", "Lunar Shield", "Eclipse Strike"); // HP,MP,ATK,DEF,Name
     }
 
     @Override
-    public String getName() {
-        return "Luna";
+    public void whenPicked(){
+        System.out.println(getName()+": The moon guides me!");
     }
-
-    // Optional: override skills if you want her to be different
+    
     @Override
-    public void skillOne(Character target, Character self) {
-        System.out.println(getName() + " uses Moon Slash!");
-        target.takeDamage(20); // or whatever damage system you use
-    }
-
-    @Override
-    public String getSkillOneName() {
-        return "Moon Slash";
+    public void whenDefeated() {
+        System.out.println(getName()+": The darkness prevails...");
     }
 
     @Override
-    public void skillTwo(Character target, Character self) {
-        System.out.println(getName() + " uses Lunar Shield!");
-        self.defend(self); // just as an example
+    public void whenVictory(){
+        System.out.println(getName()+": I shine bright!");
     }
 
     @Override
-    public String getSkillTwoName() {
-        return "Lunar Shield";
+    public void skillOne(Character enemy, Character player) {
+        System.out.println(player.getName()+" used "+getSkillOneName());
+        enemy.setHP(enemy.getHP()-(player.calculateDamage()*2)-enemy.getDEF());
     }
 
     @Override
-    public void skillThree(Character target, Character self) {
-        System.out.println(getName() + " uses Eclipse Strike!");
-        target.takeDamage(30);
+    public void skillTwo(Character enemy, Character player) {
+        System.out.println(player.getName()+" used "+getSkillTwoName());
+        player.setDEF(player.getDEF() + 2); // boost defense
     }
 
     @Override
-    public String getSkillThreeName() {
-        return "Eclipse Strike";
+    public void skillThree(Character enemy, Character player) {
+        System.out.println(player.getName()+" used "+getSkillThreeName());
+        enemy.setHP(enemy.getHP()-(player.calculateDamage()*3));
     }
 }
