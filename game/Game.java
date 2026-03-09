@@ -11,7 +11,20 @@ public class Game{
         
         //Intro intro = new Intro();  Himoi ninyog introduction section.🥺🙏
         //Intro.start();
+        Intro intro = new Intro();
+        intro.start();
 
+        class Intro{
+            public void start(){
+                System.out.println("====================================");
+                System.out.println("        WELCOME TO THE GAME         ");
+                System.out.println("====================================");
+                System.out.println("Two players will choose characters.");
+                System.out.println("Fight until one player's HP becomes 0");
+                System.out.println("Good Luck!");
+                System.out.println("===================================\n");
+            }
+        }
         int p1, p2;
         int turn = 1, action;
         Character player1;
@@ -97,6 +110,26 @@ public class Game{
 
         //Gameover End = new Gameover(); Himoi ninyo og Game Over class, Mo show kinsa nkadaug or if Tie ba.🥺🙏
         //End.start();
+        Gamover end = new Gameover(); //added by 
+        end.start(player1, player2);
+
+    class Gameover {
+
+        public void start(characters.Character p1, characters.Character p2) {
+
+            System.out.println("\n========== GAME OVER ==========");
+
+            if (p1.getHP() <= 0 && p2.getHP() <= 0) {
+            System.out.println("It's a TIE!");
+            } else if (p1.getHP() <= 0) {
+            System.out.println("Player 2 (" + p2.getName() + ") WINS!");
+            } else if (p2.getHP() <= 0) {
+            System.out.println("Player 1 (" + p1.getName() + ") WINS!");
+            }
+            System.out.println("===============================");
+        }
+
+    }
 
         scan.close();
     }
