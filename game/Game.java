@@ -4,6 +4,7 @@ import java.util.Scanner;
 import characters.Character;
 import characters.Able;
 import characters.Kane;
+import characters.Luna;
 
 public class Game{
     public void start(){//Main Game Loop happens here.🥺🙏
@@ -11,7 +12,10 @@ public class Game{
         
         //Intro intro = new Intro();  Himoi ninyog introduction section.🥺🙏
         //Intro.start();
+        Intro intro = new Intro(); //added by Bolts = 🥺👉👈 
+        intro.start();
 
+        
         int p1, p2;
         int turn = 1, action;
         Character player1;
@@ -20,7 +24,7 @@ public class Game{
         System.out.println("Choose your character.");//Character Creation🥺🙏
         System.out.println("1. Kane");
         System.out.println("2. Able");
-        System.out.println("3. ???");
+        System.out.println("3. Luna");
         System.out.println("4. ???");
         System.out.println("5. ???");// Dunno, add lang unsa inyo ganahan, pede rasad malapas og 5 character.🥺🙏 Erase after change.
 
@@ -33,6 +37,10 @@ public class Game{
             }
             case 2 -> {
                 player1 = new Able();
+                player1.whenPicked();
+            }
+            case 3 -> {
+                player1 = new Luna();
                 player1.whenPicked();
             }
             default -> { System.out.println("Invalid input, defaulting to Kane.");   player1 = new Kane(); }
@@ -49,8 +57,13 @@ public class Game{
                 player2 = new Able();
                 player2.whenPicked();
             }
+            case 3 -> {
+                player2 = new Luna();
+                player2.whenPicked();
+            }
             default -> { System.out.println("Invalid input, defaulting to Able.");   player2 = new Able(); }
         }
+
 
         while(player1.getHP() > 0 && player2.getHP() > 0){// Battle Loop🥺🙏
             System.out.println("Player 1("+player1.getName()+") HP: " + player1.getHP());
@@ -97,8 +110,54 @@ public class Game{
 
         //Gameover End = new Gameover(); Himoi ninyo og Game Over class, Mo show kinsa nkadaug or if Tie ba.🥺🙏
         //End.start();
+        Gameover end = new Gameover(); //added by Bolts = 🥺👉👈 
+        end.start(player1, player2);
 
+        
         scan.close();
+    }
+}
+class Intro {
+
+    public void start() {
+
+        System.out.println("====================================");
+        System.out.println("      ⚔ EDEN'S FALL: INFERNUM ⚔");
+        System.out.println("====================================");
+        System.out.println("Two Warriors enter the arena...");
+        System.out.println("Only One will emerge victorious.");
+        System.out.println();
+        System.out.println("Choose your fighter and prepare");
+        System.out.println("for an epic battle!");
+        System.out.println("====================================");
+
+        try {
+            System.in.read();
+        } catch (Exception e) {}
+
+        System.out.println();
+    }
+}
+class Gameover {
+
+    public void start(Character p1, Character p2) {
+
+        System.out.println("\n====================================");
+        System.out.println("             GAME OVER");
+        System.out.println("====================================");
+
+        if (p1.getHP() <= 0 && p2.getHP() <= 0) {
+            System.out.println("The battle ended in a TIE!");
+        }
+        else if (p1.getHP() <= 0) {
+            System.out.println("🏆 Player 2 (" + p2.getName() + ") is the WINNER!");
+        }
+        else if (p2.getHP() <= 0) {
+            System.out.println("🏆 Player 1 (" + p1.getName() + ") is the WINNER!");
+        }
+
+        System.out.println("====================================");
+        System.out.println("Thanks for playing!");
     }
 }
 
