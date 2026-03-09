@@ -4,6 +4,7 @@ import java.util.Scanner;
 import characters.Character;
 import characters.Able;
 import characters.Kane;
+import characters.Luna;
 
 public class Game{
     public void start(){//Main Game Loop happens here.🥺🙏
